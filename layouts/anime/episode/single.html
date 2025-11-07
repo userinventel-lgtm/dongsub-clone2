@@ -1,0 +1,9 @@
+{{ define "main" }}
+<article class="episode container">
+  <h1>{{ .Title }}</h1>
+  {{ partial "video.html" . }}
+  <div class="episode-desc">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

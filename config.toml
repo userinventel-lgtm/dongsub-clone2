@@ -1,0 +1,16 @@
+baseURL = "https://your-site.netlify.app/"
+languageCode = "ja"
+title = "DongsubïL¥¢¥Ë¥á¥µ¥¤¥È"
+theme = ""
+enableRobotsTXT = true
+
+[params]
+  description = "×ÖÄ»¸¶¤­¥¢¥Ë¥áÒ•Â—¥µ¥¤¥È"
+  author = "Your Name"
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[permalinks]
+  anime = "/anime/:slug/"

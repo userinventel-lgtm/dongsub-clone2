@@ -1,0 +1,29 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "anime"
+    label: "Anime"
+    folder: "content/anime"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image"}
+      - label: "Episodes"
+        name: "episodes"
+        widget: "list"
+        fields:
+          - {label: "Episode Title", name: "title", widget: "string"}
+          - {label: "Video Embed URL", name: "video_embed", widget: "string"}
+          - label: "Subtitles"
+            name: "subtitles"
+            widget: "list"
+            fields:
+              - {label: "Language", name: "lang", widget: "string"}
+              - {label: "Subtitle File", name: "url", widget: "file"}

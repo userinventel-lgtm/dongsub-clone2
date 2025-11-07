@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="anime-list container">
+  <h2>最新アニメはここ</h2>
+  <div class="grid">
+    {{ range first 30 (where .Site.Pages "Section" "anime") }}
+      <div class="card">
+        <a href="{{ .Permalink }}">
+          <img src="{{ .Params.thumbnail }}" alt="{{ .Title }}">
+          <div class="card-info">
+            <h3>{{ .Title }}</h3>
+            <p>{{ .Params.description | truncate 80 }}</p>
+	<h3>最新アニメをいつでも</h3>
+          </div>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

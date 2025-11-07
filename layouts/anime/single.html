@@ -1,0 +1,16 @@
+{{ define "main" }}
+<section class="anime-detail container">
+  <img class="cover" src="{{ .Params.thumbnail }}" alt="{{ .Title }}">
+  <h1>{{ .Title }}</h1>
+  <p>{{ .Params.description }}</p>
+
+  <h2>エピソード一覧</h2>
+  <ul class="episode-list">
+    {{ range .Pages.ByParam "episode" }}
+      <li>
+        <a href="{{ .Permalink }}">第{{ .Params.episode }}話：{{ .Title }}</a>
+      </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
