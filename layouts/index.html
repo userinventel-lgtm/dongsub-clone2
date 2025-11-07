@@ -1,4 +1,15 @@
 {{ define "main" }}
+<!-- 显示 _index.md 的内容 -->
+<section class="hero">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    <div class="content">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+
+<!-- 显示动漫列表 -->
 <section class="anime-list container">
   <h2>最新アニメはここ</h2>
   <div class="grid">
@@ -9,7 +20,7 @@
           <div class="card-info">
             <h3>{{ .Title }}</h3>
             <p>{{ .Params.description | truncate 80 }}</p>
-	<h3>最新アニメをいつでも</h3>
+            <h3>最新アニメをいつでも</h3>
           </div>
         </a>
       </div>
